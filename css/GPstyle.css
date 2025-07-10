@@ -1,0 +1,37 @@
+body{
+    background: linear-gradient(to bottom, #0F2027, #2C5364);
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+#backBtn{
+    margin-top: 40px;
+    width: 120px;
+    height: 60px;
+    font-size: 40px;
+    background-color: #2962ff;
+}
+#gameTitle{
+    margin-top: 120px;
+    font-size: 60px;
+    color: #FFD700;
+}
+p{
+    font-size: 40px;
+    color: #a88e00;
+}
+#upperBuffer{
+    height: 10px;
+}
+p1{
+    font-size: 30px;
+    color: #65a800;
+}
+#scoreBtn{
+    margin-top: 40px;
+    width: 120px;
+    height: 60px;
+    font-size: 40px;
+    background-color: #f4ff29;
+}
