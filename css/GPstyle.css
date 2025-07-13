@@ -5,29 +5,26 @@ body{
     min-height: 100vh;
 
 }
-#backBtn{
+#ResetBtn{
     margin-top: 40px;
     width: 120px;
     height: 60px;
     font-size: 40px;
-    background-color: #2962ff;
+    background-color: #ff2929;
 }
 #gameTitle{
     margin-top: 120px;
     font-size: 60px;
     color: #FFD700;
 }
-p{
+h2{
     font-size: 40px;
     color: #a88e00;
 }
 #upperBuffer{
     height: 10px;
 }
-p1{
-    font-size: 30px;
-    color: #65a800;
-}
+
 #scoreBtn{
     margin-top: 40px;
     width: 120px;
@@ -35,3 +32,33 @@ p1{
     font-size: 40px;
     background-color: #f4ff29;
 }
+
+
+.chBtn {
+  background-color: #bcbcbc;
+  color: rgb(0, 0, 0);
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 400px;
+  font-size: 30px;
+  height: 80px;
+
+}
+
+/* This hover only applies if button is NOT correct or wrong */
+.chBtn:not(.correct):not(.wrong):hover {
+  background: linear-gradient(to right, #0033ff, #119cff);
+  transform: scale(1.02);
+}
+
+/* Correct answer */
+.chBtn.correct {
+  background: #28a745 !important;
+  color: white;
+}
+
+/* Wrong answer */
+.chBtn.wrong {
+  background: #dc3545 !important;
+  color: white;
+}
+
