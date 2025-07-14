@@ -102,7 +102,7 @@ const questions = [
   },
  {
     cat: "Logic & Riddles",
-    question: "What begins with T, ends with T, and has T in it?",
+    question: "What begins with T, ends with T, and has T inside it?",
     choices: ["Teapot", "Tent", "Toilet", "Tablet"],
     answer: 0,
   },
@@ -120,8 +120,8 @@ const questions = [
   },
  {
     cat: "Logic & Riddles",
-    question: "if you have 3 apples and you take 2, how many apples do you have?",
-    choices: ["0", "3", "2", "1"],
+    question: "how many colors are there in a rainbow?",
+    choices: ["10", "9", "7", "5"],
     answer: 2,
   },
 ]
@@ -145,16 +145,25 @@ scoreBtn.addEventListener("click", ()=>
     window.location.href="ScoreP.html";
 })
 
-//
+
 let currentQuestionIndex = 0;
 
-// Filtered questions list (you can shuffle or filter by category if needed)
+
 const totalQuestions = questions.length;
 
 const questionEl = document.getElementById('question');
 const choiceBtns = Array.from(document.querySelectorAll('.chBtn'));
 
-// Load a question into the page
+//score1
+const totalScore = document.getElementById('scoreCircle');
+let score = 0;
+
+function updateScoreDisplay() {
+    document.getElementById('scoreCircle').textContent = score;
+}
+
+
+// Load question into the page
 function loadQuestion(index) {
   const q = questions[index];
   questionEl.textContent = q.question;
@@ -173,17 +182,20 @@ choiceBtns.forEach(btn => {
 
     if (selected === correct) {
       e.target.classList.add("correct");
+      score++;
+      updateScoreDisplay(); 
     } else {
       e.target.classList.add("wrong");
     }
 
-    // Wait then show next question
+    // Wait 1000ms then show next question
     setTimeout(() => {
       currentQuestionIndex++;
       if (currentQuestionIndex < totalQuestions) {
         loadQuestion(currentQuestionIndex);
       } else {
-        questionEl.textContent = "Quiz completed!";
+        localStorage.setItem("totalScore", score);
+        questionEl.textContent = `Quiz completed!`;
         document.querySelector(".choices").innerHTML = "";
       }
     }, 1000);
@@ -192,3 +204,6 @@ choiceBtns.forEach(btn => {
 
 // Start the quiz
 loadQuestion(currentQuestionIndex);
+
+
+

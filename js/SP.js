@@ -7,3 +7,4 @@ sBtn.addEventListener("click", ()=>
 {
     window.location.href="GP.html";
 })
+

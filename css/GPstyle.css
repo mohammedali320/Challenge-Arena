@@ -32,6 +32,11 @@ h2{
     font-size: 40px;
     background-color: #f4ff29;
 }
+#question{
+  background-color: #0F2027;
+  color: white;
+  height: 100px;
+}
 
 
 .chBtn {
@@ -61,4 +66,21 @@ h2{
   background: #dc3545 !important;
   color: white;
 }
+
+#scoreCircle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #00C897;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;               /* Use Flexbox */
+    align-items: center;         /* Vertical centering */
+    justify-content: center;     /* Horizontal centering */
+    border-radius: 50%;          /* Make it circular */
+}
+
 
