@@ -154,9 +154,32 @@ const totalQuestions = questions.length;
 const questionEl = document.getElementById('question');
 const choiceBtns = Array.from(document.querySelectorAll('.chBtn'));
 
-//score1
+//score
 const totalScore = document.getElementById('scoreCircle');
 let score = 0;
+let cat1Score = 0; // Sports
+let cat2Score = 0; // Capital Cities
+let cat3Score = 0; // Technology
+let cat4Score = 0; // Logic & Riddles
+
+//function to update cat score
+function updateCategoryScore(category) {
+  switch (category) {
+    case "Sports":
+      cat1Score++;
+      break;
+    case "Capital Cities":
+      cat2Score++;
+      break;
+    case "Technology":
+      cat3Score++;
+      break;
+    case "Logic & Riddles":
+      cat4Score++;
+      break;
+  }
+}
+
 
 function updateScoreDisplay() {
     document.getElementById('scoreCircle').textContent = score;
@@ -183,18 +206,24 @@ choiceBtns.forEach(btn => {
     if (selected === correct) {
       e.target.classList.add("correct");
       score++;
+      const category = questions[currentQuestionIndex].cat;
+      updateCategoryScore(category);
       updateScoreDisplay(); 
     } else {
       e.target.classList.add("wrong");
     }
 
-    // Wait 1000ms then show next question
+    
     setTimeout(() => {
       currentQuestionIndex++;
       if (currentQuestionIndex < totalQuestions) {
         loadQuestion(currentQuestionIndex);
       } else {
         localStorage.setItem("totalScore", score);
+        localStorage.setItem("cat1Score", cat1Score);
+        localStorage.setItem("cat2Score", cat2Score);
+        localStorage.setItem("cat3Score", cat3Score);
+        localStorage.setItem("cat4Score", cat4Score);
         questionEl.textContent = `Quiz completed!`;
         document.querySelector(".choices").innerHTML = "";
       }
@@ -204,6 +233,7 @@ choiceBtns.forEach(btn => {
 
 // Start the quiz
 loadQuestion(currentQuestionIndex);
+
 
 
 
