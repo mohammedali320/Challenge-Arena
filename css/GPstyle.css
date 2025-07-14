@@ -11,6 +11,11 @@ body{
     height: 60px;
     font-size: 40px;
     background-color: #ff2929;
+    background: linear-gradient(to right, #ff2929, #480000);
+}
+#ResetBtn:hover {
+  background: linear-gradient(to right, #ff5353, #ff1515);
+  transform: scale(1.02);
 }
 #gameTitle{
     margin-top: 120px;
@@ -30,8 +35,13 @@ h2{
     width: 120px;
     height: 60px;
     font-size: 40px;
-    background-color: #f4ff29;
+    background-color: #f2ff00;
 }
+#scoreBtn:hover {
+  background: linear-gradient(to right, #11ff00, #005e00);
+  transform: scale(1.02);
+}
+
 #question{
   background-color: #0F2027;
   color: white;
