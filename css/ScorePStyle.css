@@ -13,21 +13,21 @@ body{
 }
 p{
     font-size: 40px;
-    color: #a88e00;
+    color: #00FFFF;
 }
 #upperBuffer{
     height: 10px;
 }
 p1{
     font-size: 30px;
-    color: #65a800;
+    color: #00a6ff;
 }
 #resetBtn{
     margin-top: 40px;
     width: 300px;
     height: 60px;
     font-size: 40px;
-    background-color: #7301ca;
+    background-color: #016cca;
 }
 #resetBtn:hover {
   background: linear-gradient(to right, #c57aff, #a229ff);

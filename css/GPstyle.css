@@ -26,6 +26,10 @@ h2{
     font-size: 40px;
     color: #a88e00;
 }
+h3{
+  color: #dc3545;
+  font-size: 25px;
+}
 #upperBuffer{
     height: 10px;
 }

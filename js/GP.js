@@ -162,6 +162,45 @@ let cat2Score = 0; // Capital Cities
 let cat3Score = 0; // Technology
 let cat4Score = 0; // Logic & Riddles
 
+//timer
+let timerInterval;
+let timeLeft = 30;
+
+function startTimer() {
+  clearInterval(timerInterval); // clear old timer
+  timeLeft = 30;
+  document.getElementById("timer").textContent = `Time Left: ${timeLeft}`;
+
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    document.getElementById("timer").textContent = `Time Left: ${timeLeft}`;
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      goToNextQuestion(); // auto-skip
+    }
+  }, 1000);
+}
+
+function goToNextQuestion() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < totalQuestions) {
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  } else {
+    localStorage.setItem("totalScore", score);
+    localStorage.setItem("cat1Score", cat1Score);
+    localStorage.setItem("cat2Score", cat2Score);
+    localStorage.setItem("cat3Score", cat3Score);
+    localStorage.setItem("cat4Score", cat4Score);
+    
+    questionEl.textContent = `Quiz completed!`;
+    document.querySelector(".choices").innerHTML = "";
+    document.getElementById("timer").textContent = "";
+  }
+}
+
+
 //function to update cat score
 function updateCategoryScore(category) {
   switch (category) {
@@ -215,24 +254,15 @@ choiceBtns.forEach(btn => {
 
     
     setTimeout(() => {
-      currentQuestionIndex++;
-      if (currentQuestionIndex < totalQuestions) {
-        loadQuestion(currentQuestionIndex);
-      } else {
-        localStorage.setItem("totalScore", score);
-        localStorage.setItem("cat1Score", cat1Score);
-        localStorage.setItem("cat2Score", cat2Score);
-        localStorage.setItem("cat3Score", cat3Score);
-        localStorage.setItem("cat4Score", cat4Score);
-        questionEl.textContent = `Quiz completed!`;
-        document.querySelector(".choices").innerHTML = "";
-      }
-    }, 1000);
+    clearInterval(timerInterval); // stop timer if answered
+    goToNextQuestion();
+}, 1000);
   });
 });
 
 // Start the quiz
 loadQuestion(currentQuestionIndex);
+startTimer();
 
 
 
