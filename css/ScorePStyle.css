@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to bottom, #0F2027, #2C5364);
+    background: linear-gradient(to bottom, #081317, #2C5364);
     text-align: center;
     align-items: center;
     min-height: 100vh;
@@ -27,7 +27,7 @@ p1{
     width: 300px;
     height: 60px;
     font-size: 40px;
-    background-color: #016cca;
+    background-color: #3599f0;
 }
 #resetBtn:hover {
   background: linear-gradient(to right, #c57aff, #a229ff);
