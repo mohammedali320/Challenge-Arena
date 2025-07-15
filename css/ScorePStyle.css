@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to bottom, #081317, #2C5364);
+    background: linear-gradient(to bottom, #081317, #36c3ff);
     text-align: center;
     align-items: center;
     min-height: 100vh;
@@ -10,24 +10,27 @@ body{
     margin-top: 120px;
     font-size: 60px;
     color: #FFD700;
+    font-weight: bold;
 }
 p{
     font-size: 40px;
-    color: #00FFFF;
+    color: #b600ca;
+    font-weight: bold;
 }
 #upperBuffer{
     height: 10px;
 }
 p1{
     font-size: 30px;
-    color: #00a6ff;
+    color: #490052;
+    font-weight: bold;
 }
 #resetBtn{
     margin-top: 40px;
     width: 300px;
     height: 60px;
     font-size: 40px;
-    background-color: #3599f0;
+    background-color: #c300dd;
 }
 #resetBtn:hover {
   background: linear-gradient(to right, #c57aff, #a229ff);

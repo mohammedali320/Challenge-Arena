@@ -6,6 +6,7 @@ const reBtn=document.getElementById("resetBtn")
 reBtn.addEventListener("click", ()=>
 {
     window.location.href="index.html";
+    difficulty=1;
 })
 
 const totalScore = localStorage.getItem("totalScore") || 0;
