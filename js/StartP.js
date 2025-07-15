@@ -15,8 +15,6 @@ const Easy=document.getElementById("Easy")
 Easy.addEventListener("click", ()=>
 {
     difficulty=1;
-    console.log("Easy")
-    console.log(difficulty)
     localStorage.setItem("difficulty", difficulty);
 })
 
@@ -25,8 +23,6 @@ const Medium=document.getElementById("Medium")
 Medium.addEventListener("click", ()=>
 {
     difficulty=2;
-    console.log("Medium")
-    console.log(difficulty)
     localStorage.setItem("difficulty", difficulty);
 })
 
@@ -35,8 +31,6 @@ const Hard=document.getElementById("Hard")
 Hard.addEventListener("click", ()=>
 {
     difficulty=3;
-    console.log("Hard")
-    console.log(difficulty)
     localStorage.setItem("difficulty", difficulty);
 })
 

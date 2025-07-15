@@ -145,12 +145,9 @@ scoreBtn.addEventListener("click", ()=>
     window.location.href="ScoreP.html";
 })
 
-
 let currentQuestionIndex = 0;
 //import difficulty level
 const difficulty = localStorage.getItem("difficulty") || 1;
-console.log(difficulty)
-
 
 const totalQuestions = questions.length;
 
@@ -171,7 +168,10 @@ let timeLeft = 30;
 
 function startTimer() {
   clearInterval(timerInterval); // clear old timer
-  timeLeft = 30;
+  if (difficulty==1)timeLeft = 30;
+  else if (difficulty==2)timeLeft = 20;
+  else if (difficulty==3)timeLeft = 12;
+  
   document.getElementById("timer").textContent = `Time Left: ${timeLeft}`;
 
   timerInterval = setInterval(() => {
@@ -257,7 +257,7 @@ choiceBtns.forEach(btn => {
 
     
     setTimeout(() => {
-    clearInterval(timerInterval); // stop timer if answered
+    clearInterval(timerInterval);
     goToNextQuestion();
 }, 1000);
   });
