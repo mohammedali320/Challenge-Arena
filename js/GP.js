@@ -147,6 +147,9 @@ scoreBtn.addEventListener("click", ()=>
 
 
 let currentQuestionIndex = 0;
+//import difficulty level
+const difficulty = localStorage.getItem("difficulty") || 1;
+console.log(difficulty)
 
 
 const totalQuestions = questions.length;
