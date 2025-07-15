@@ -17,6 +17,29 @@ body{
   background: linear-gradient(to right, #00ff26, #006a1a);
   transform: scale(1.02);
 }
+
+#Easy{
+    margin-top: 40px;
+    width: 85px;
+    height: 30px;
+    font-size: 20px;
+    background: linear-gradient(to right, #00ff26, #006a1a);
+}
+#Medium{
+    margin-top: 40px;
+    width: 85px;
+    height: 30px;
+    font-size: 20px;
+    background: linear-gradient(to right, #ff9100, #995700);
+}
+#Hard{
+    margin-top: 40px;
+    width: 85px;
+    height: 30px;
+    font-size: 20px;
+    background: linear-gradient(to right, #ff0000, #ab0000);
+}
+
 #gameTitle{
     margin-top: 120px;
     font-size: 60px;
