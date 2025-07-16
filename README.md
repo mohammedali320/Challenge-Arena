@@ -1,7 +1,6 @@
 # Challenge Arena
 
-## Game page
-![Game page](assets/challenge-arena.png)
+
 ## Description
 __Challenge Arena__ is a multiple-choice quiz game where the player is presented with 20 questions, each offering four possible answer choices. The player selects an answer by clicking on it, and the game immediately reacts—displaying feedback such as “The correct answer is…”—before automatically moving to the next question. At the end of the game, a final score is displayed, including the overall __total score__ as well as the __score for each category__.
 
@@ -19,17 +18,32 @@ __Challenge Arena__ is a multiple-choice quiz game where the player is presented
 - A final score screen showing both total and per-category results
 - A Reset button to replay the game
 ## How to play
-- Select difficulty level by clicking on the button, after clicking on it it will change to purple
-- Click on start button
-- One question will apper with 4 four possible answer choices
-- For each question there is a time to solve it depend on difficulty level
-  -60 seconds for Easy
-  -40 seconds for Medium
-  -30 seconds for Hard
-- If the player didnt select difficulty level it will be easy as defult
-- After select on of the answer, if the answer is true it will change it color to green, if wrong it will change to red
-- After one second the next question will apper
-- when the questions completed, "Chellenge completed!" message will apper
-- To see the score, click "Score" button
-- In the score page if want to go to start page, click "Home page" button
-- To restart the challenge in the game page click "Reset" button"
+- Select Difficulty
+  - Choose your preferred difficulty by clicking a button:
+    - 🟣 Purple = Selected
+    - 💡 If no difficulty is chosen, Easy is selected by default
+  - Difficulty affects the time limit per question:
+    - 🟢 Easy – 60 seconds
+    - 🟡 Medium – 40 seconds
+    - 🔴 Hard – 30 seconds
+- Start the Game
+  - Click the Start button to begin the challenge.
+- Answering Questions
+  - One question will appear at a time, with 4 answer choices.
+  - Click on your chosen answer:
+    - ✅ Correct answer = turns green
+    - ❌ Wrong answer = turns red
+- After 1 second, the next question automatically appears.
+- Finishing the Challenge
+  - Once all questions are answered, a “Challenge Completed!” message will be shown.
+- View Your Score
+  - Click the Score button to see your results.
+  - In the score page:
+    - Click “Home Page” to go back to the start.
+    - Click “Reset” (from the game page) to restart the challenge.
+
+## 🚧 Initial Design
+![Initial Game page](assets/challenge-arena.png)
+
+## 🎯 Actual Game Page
+![Real Game page](assets/Real-Game.png)
