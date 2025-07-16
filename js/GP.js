@@ -168,9 +168,9 @@ let timeLeft = 30;
 
 function startTimer() {
   clearInterval(timerInterval); // clear old timer
-  if (difficulty==1)timeLeft = 30;
-  else if (difficulty==2)timeLeft = 20;
-  else if (difficulty==3)timeLeft = 12;
+  if (difficulty==1)timeLeft = 60;
+  else if (difficulty==2)timeLeft = 40;
+  else if (difficulty==3)timeLeft = 20;
   
   document.getElementById("timer").textContent = `Time Left: ${timeLeft}`;
 

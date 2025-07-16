@@ -22,7 +22,7 @@ p{
 }
 p1{
     font-size: 30px;
-    color: #490052;
+    color: #f27cff;
     font-weight: bold;
 }
 #resetBtn{
@@ -35,4 +35,7 @@ p1{
 #resetBtn:hover {
   background: linear-gradient(to right, #c57aff, #a229ff);
   transform: scale(1.02);
+}
+#ScoreMessage{
+    color: #ffb700;
 }

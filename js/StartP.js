@@ -16,6 +16,7 @@ Easy.addEventListener("click", ()=>
 {
     difficulty=1;
     localStorage.setItem("difficulty", difficulty);
+    updateSelected(Easy);
 })
 
 const Medium=document.getElementById("Medium")
@@ -24,6 +25,7 @@ Medium.addEventListener("click", ()=>
 {
     difficulty=2;
     localStorage.setItem("difficulty", difficulty);
+    updateSelected(Medium);
 })
 
 const Hard=document.getElementById("Hard")
@@ -32,7 +34,12 @@ Hard.addEventListener("click", ()=>
 {
     difficulty=3;
     localStorage.setItem("difficulty", difficulty);
+    updateSelected(Hard);
 })
-
+const allButtons = [Easy, Medium, Hard];
+function updateSelected(selectedBtn) {
+  allButtons.forEach(btn => btn.classList.remove("selected"));
+  selectedBtn.classList.add("selected");
+}
 
 

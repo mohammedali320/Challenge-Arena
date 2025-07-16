@@ -29,6 +29,10 @@ body{
   background: linear-gradient(to right, #6eff84, #00ff26);
   transform: scale(1.02);
 }
+#Easy.selected {
+  background: linear-gradient(to right, #7a0063, #7a0063);
+  font-weight: bold;
+}
 #Medium{
     margin-top: 40px;
     width: 85px;
@@ -40,6 +44,10 @@ body{
   background: linear-gradient(to right, #ffce48, #ff9100);
   transform: scale(1.02);
 }
+#Medium.selected {
+  background: linear-gradient(to right, #7a0063, #7a0063);
+  font-weight: bold;
+}
 #Hard{
     margin-top: 40px;
     width: 85px;
@@ -50,6 +58,10 @@ body{
 #Hard:hover {
   background: linear-gradient(to right, #ff7860, #ff0000);
   transform: scale(1.02);
+}
+#Hard.selected {
+  background: linear-gradient(to right, #7a0063, #7a0063);
+  font-weight: bold;
 }
 #gameTitle{
     margin-top: 120px;
