@@ -26,13 +26,13 @@ document.querySelectorAll("p1")[3].textContent = `🧠 Logic & Riddles: score ${
 if (totalScore == 20) {
   document.getElementById("ScoreMessage").textContent ="🏆 Perfect 20! You're a champion!";
 } else if (totalScore >= 16 ) {
-  document.getElementById("ScoreMessage").textContent = `🎉 Excellent!`;
+  document.getElementById("ScoreMessage").textContent = "🎉 Excellent!";
 } else if (totalScore >= 12) {
-  document.getElementById("ScoreMessage").textContent =`👍 Good job!`;
+  document.getElementById("ScoreMessage").textContent ="👍 Good job!";
 } else if (totalScore >= 8) {
-  document.getElementById("ScoreMessage").textContent = `🙂 Not bad!`;
+  document.getElementById("ScoreMessage").textContent = "💪 Keep practicing!";
 } else if (totalScore >= 4) {
-  document.getElementById("ScoreMessage").textContent =`💪 Keep practicing!`;
+  document.getElementById("ScoreMessage").textContent ="🙂 Not bad!";
 } else {
   document.getElementById("ScoreMessage").textContent = "😅 Oops! You scored 0. Try again!";
 }

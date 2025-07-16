@@ -197,7 +197,7 @@ function goToNextQuestion() {
     localStorage.setItem("cat3Score", cat3Score);
     localStorage.setItem("cat4Score", cat4Score);
     
-    questionEl.textContent = `Quiz completed!`;
+    questionEl.textContent = `Chellenge completed!`;
     document.querySelector(".choices").innerHTML = "";
     document.getElementById("timer").textContent = "";
   }
