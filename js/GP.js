@@ -1,6 +1,5 @@
-// 20 questions, 5 in each cat, 4 
+
 const questions = [
-  //sports
   {
     cat: "Sports",
     question: "Who has won the most ballon d'Or awards in football history?",
@@ -31,7 +30,6 @@ const questions = [
     choices: ["Lance Armstrong", "Alberto Contador", "Chris Froome", "Mathieu van der Poel"],
     answer: 0,
   },
-  //Capital Cities
    {
     cat: "Capital Cities",
     question: "What is the capital of Australia?",
@@ -62,7 +60,6 @@ const questions = [
     choices: ["Hue", "Ho Chi Minh City", "Da Nang", "Hanoi"],
     answer: 3,
   },
-//Technology
    {
     cat: "Technology",
     question: "What does CPU stand for?",
@@ -93,7 +90,6 @@ const questions = [
     choices: ["iOS", "Microsoft Office", "Windows 10", "Linux"],
     answer: 3,
   },
-// Logic & Riddles
  {
     cat: "Logic & Riddles",
     question: "if two cats catch two mice in two miutes, how namy cats are needed to catch 100 mice in 100 minutes?",
@@ -126,11 +122,8 @@ const questions = [
   },
 ]
 
-
 const ResetBtn=document.getElementById("ResetBtn")
 
-
-//make the button send to start page
 ResetBtn.addEventListener("click", ()=>
 {
     window.location.href="index.html";
@@ -138,8 +131,6 @@ ResetBtn.addEventListener("click", ()=>
 
 const scoreBtn=document.getElementById("scoreBtn")
 
-
-//make the button send to score page
 scoreBtn.addEventListener("click", ()=>
 {
     window.location.href="ScoreP.html";
@@ -154,17 +145,16 @@ const totalQuestions = questions.length;
 const questionEl = document.getElementById('question');
 const choiceBtns = Array.from(document.querySelectorAll('.chBtn'));
 
-//score
 const totalScore = document.getElementById('scoreCircle');
 let score = 0;
-let cat1Score = 0; // Sports
-let cat2Score = 0; // Capital Cities
-let cat3Score = 0; // Technology
-let cat4Score = 0; // Logic & Riddles
+let cat1Score = 0; 
+let cat2Score = 0;  
+let cat3Score = 0; 
+let cat4Score = 0; 
 
 //timer
 let timerInterval;
-let timeLeft = 30;
+let timeLeft = 60;
 
 function startTimer() {
   clearInterval(timerInterval); // clear old timer
@@ -203,7 +193,6 @@ function goToNextQuestion() {
   }
 }
 
-
 //function to update cat score
 function updateCategoryScore(category) {
   switch (category) {
@@ -235,7 +224,7 @@ function loadQuestion(index) {
 
   choiceBtns.forEach((btn, i) => {
     btn.textContent = q.choices[i];
-    btn.classList.remove("correct", "wrong"); // reset button styles
+    btn.classList.remove("correct", "wrong");
   });
 }
 
@@ -263,7 +252,7 @@ choiceBtns.forEach(btn => {
   });
 });
 
-// Start the quiz
+
 loadQuestion(currentQuestionIndex);
 startTimer();
 

@@ -2,7 +2,7 @@
 const sBtn=document.getElementById("StartBtn")
 
 
-//make the button send to
+
 sBtn.addEventListener("click", ()=>
 {
     window.location.href="GP.html";
@@ -11,6 +11,7 @@ sBtn.addEventListener("click", ()=>
 let difficulty=1;
 localStorage.setItem("difficulty", difficulty);
 const Easy=document.getElementById("Easy")
+
 //make the button set difficulty level if 1 easy ,if 2 medium and 3 for hard
 Easy.addEventListener("click", ()=>
 {
@@ -20,7 +21,7 @@ Easy.addEventListener("click", ()=>
 })
 
 const Medium=document.getElementById("Medium")
-//make the button set difficulty level if 1 easy ,if 2 medium and 3 for hard
+
 Medium.addEventListener("click", ()=>
 {
     difficulty=2;
@@ -29,7 +30,7 @@ Medium.addEventListener("click", ()=>
 })
 
 const Hard=document.getElementById("Hard")
-//make the button set difficulty level if 1 easy ,if 2 medium and 3 for hard
+
 Hard.addEventListener("click", ()=>
 {
     difficulty=3;
